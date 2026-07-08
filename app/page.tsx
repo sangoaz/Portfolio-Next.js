@@ -1,65 +1,80 @@
-import Image from "next/image";
+import Link from "next/link";
+import ProjectCard from "@/components/ProjectCard";
+
+const featured = [
+  {
+    title: "GLF Auto",
+    description:
+      "Plateforme web pour un garage automobile — catalogue de véhicules et pièces d'occasion, espace d'administration. Déployée en production pour un client réel.",
+    tags: ["FastAPI", "PostgreSQL", "Next.js"],
+    href: "/projets/glf-auto",
+    image: "/projects/glf-auto/home.png",
+  },
+  {
+    title: "Car Fleet Management",
+    description:
+      "API de gestion de flotte automobile multi-entreprises : véhicules, entretiens, carburant, alertes automatiques. 96% de couverture de tests.",
+    tags: ["FastAPI", "SQLModel", "Pytest"],
+    href: "/projets/car-fleet",
+    image: "/projects/car-fleet/swagger.png",
+  },
+  {
+    title: "Brian's Buzzer",
+    description:
+      "Application de buzzer temps réel multi-joueurs, synchronisée entre plusieurs appareils via WebSockets.",
+    tags: ["FastAPI", "WebSockets", "Next.js"],
+    href: "/projets/brians-buzzer",
+    image: "/projects/buzzer/host.png",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main>
+      <section className="mx-auto flex max-w-5xl flex-col gap-6 px-6 pb-16 pt-20 sm:pt-28">
+        <p className="text-sm font-medium text-accent">
+          Développeur backend en reconversion
+        </p>
+        <h1 className="max-w-2xl text-3xl font-medium leading-tight sm:text-5xl">
+          Kévin Fruchon
+        </h1>
+        <p className="max-w-xl text-base leading-relaxed text-muted">
+          Je construis des API et des applications web robustes avec FastAPI,
+          PostgreSQL et Next.js — d&apos;un premier commit jusqu&apos;au
+          déploiement en production.
+        </p>
+        <div className="flex flex-wrap gap-3 pt-2">
+          <Link
+            href="/projets"
+            className="rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-[#06120d] transition-opacity hover:opacity-90"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Voir mes projets
+          </Link>
+          <Link
+            href="/contact"
+            className="rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-border-strong"
           >
-            Documentation
-          </a>
+            Me contacter
+          </Link>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-24">
+        <div className="mb-8 flex items-end justify-between">
+          <h2 className="text-lg font-medium">Projets récents</h2>
+          <Link
+            href="/projets"
+            className="text-sm text-muted transition-colors hover:text-foreground"
+          >
+            Tout voir →
+          </Link>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((project) => (
+            <ProjectCard key={project.href} {...project} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }

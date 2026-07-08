@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Kévin Fruchon
 
-## Getting Started
+Portfolio personnel construit avec Next.js (App Router) et Tailwind CSS.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js 16 / React 19 / TypeScript
+- Tailwind CSS 4 (config CSS-first dans `app/globals.css`, pas de `tailwind.config.js`)
+
+## Structure
+
+```
+app/
+  page.tsx              Accueil
+  projets/
+    page.tsx             Liste des projets
+    glf-auto/            Détail GLF Auto
+    car-fleet/            Détail Car Fleet Management
+    brians-buzzer/         Détail Brian's Buzzer
+    loki-escape/            Détail Loki Escape
+  competences/           Page compétences
+  parcours/               Page parcours (reconversion)
+  contact/                 Page contact
+  globals.css              Design tokens (couleurs, thème sombre)
+
+components/
+  Navbar.tsx, Footer.tsx      Structure globale
+  ProjectCard.tsx, TechBadge.tsx, ScreenshotGallery.tsx   Blocs projets
+  ContactButton.tsx           Boutons de la page contact
+
+public/projects/          Captures d'écran par projet
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Lancer le projet en local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ouvre [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+Pour tester le build de production :
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Thème sombre, accent teal/émeraude. Toutes les couleurs sont centralisées dans `:root` et `@theme inline` en haut de `app/globals.css` (`--background`, `--surface`, `--accent`, `--muted`, etc.) — pour changer la teinte d'accent, il suffit de modifier `--accent` à un seul endroit.
 
-## Deploy on Vercel
+## À compléter
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Texte de la page **Parcours** (ancien métier, formation, dates) — actuellement des placeholders entre crochets
+- [ ] Captures d'écran réelles dans `public/projects/` (`buzzer/host.png`, `buzzer/player.png`, `car-fleet/swagger.png`, `glf-auto/home.png`, `glf-auto/admin.png`) — fichiers présents mais vides
+- [ ] Photo de profil dans `public/projects/profille/photo.png` — fichier vide, actuellement remplacé par un avatar avec initiales sur la page Parcours
+- [ ] Captures d'écran pour Loki Escape (aucune pour l'instant)
+- [ ] Liens LinkedIn / Malt sur la page Contact, si souhaité
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Projets présentés
+
+- **GLF Auto** — plateforme de vente de véhicules et pièces d'occasion pour un garage, déployée en production ([backend](https://github.com/sangoaz/GLF-auto), [frontend](https://github.com/sangoaz/GLF-auto-Frontend))
+- **Car Fleet Management** — API de gestion de flotte automobile multi-entreprises ([repo](https://github.com/sangoaz/Car-Fleet-Managment))
+- **Brian's Buzzer** — buzzer temps réel multi-joueurs via WebSockets ([repo](https://github.com/sangoaz/Brian-s-Buzzer))
+- **Loki Escape** — backend d'un escape game interactif ([repo](https://github.com/sangoaz/Escape-Loki))
+
+## Déploiement
+
+Prévu pour Vercel (build Next.js standard, aucune configuration particulière requise).
