@@ -4,8 +4,8 @@ const projects = [
   {
     title: "GLF Auto",
     description:
-      "Plateforme web pour un garage automobile — catalogue de véhicules et pièces d'occasion, prise de contact, espace d'administration. Déployée en production et utilisée par un client réel.",
-    tags: ["FastAPI", "PostgreSQL", "Next.js", "Supabase"],
+      "Plateforme web pour un garage automobile — catalogue de véhicules et pièces d'occasion, prise de contact, espace d'administration. Déployée en environnement de production et utilisée par un client réel.",
+    tags: ["FastAPI", "Production", "Fullstack"],
     href: "/projets/glf-auto",
     image: "/projects/glf-auto/home.png",
   },
@@ -13,7 +13,7 @@ const projects = [
     title: "Car Fleet Management",
     description:
       "API de gestion de flotte automobile multi-entreprises : véhicules, entretiens, carburant, alertes automatiques et rôles utilisateurs. 96% de couverture de tests.",
-    tags: ["FastAPI", "SQLModel", "PostgreSQL", "Pytest"],
+    tags: ["FastAPI", "API REST", "Multi-tenant", "Architecture modulaire"],
     href: "/projets/car-fleet",
     image: "/projects/car-fleet/swagger.png",
   },
@@ -21,7 +21,7 @@ const projects = [
     title: "Brian's Buzzer",
     description:
       "Application de buzzer temps réel multi-joueurs, synchronisée entre plusieurs appareils via WebSockets.",
-    tags: ["FastAPI", "WebSockets", "Next.js"],
+    tags: ["FastAPI", "Temps réel", "Multi-joueurs"],
     href: "/projets/brians-buzzer",
     image: "/projects/buzzer/host.png",
   },
@@ -29,7 +29,7 @@ const projects = [
     title: "Loki Escape",
     description:
       "Escape game interactif sous forme de faux chat : le joueur résout des énigmes en envoyant des mots-clés qui débloquent le scénario.",
-    tags: ["FastAPI", "Pydantic"],
+    tags: ["FastAPI", "Gestion d'état", "Logique métier"],
     href: "/projets/loki-escape",
   },
 ];
@@ -43,9 +43,9 @@ export default function Projets() {
           Ce que j&apos;ai construit
         </h1>
         <p className="max-w-xl text-sm leading-relaxed text-muted">
-          Des API backend en production à des projets personnels pour
-          apprendre et m&apos;amuser — le code source de chaque projet est
-          disponible sur{" "}
+          Des API backend en production et des projets personnels développés autour de problématiques concrètes : 
+          API REST, temps réel, gestion métier et automatisation. Lorsque cela est possible,
+           le code source de chaque projet est disponible sur {" "}
           <a
             href="https://github.com/sangoaz"
             target="_blank"

@@ -7,7 +7,7 @@ const featured = [
     title: "GLF Auto",
     description:
       "Plateforme web développée et déployée en production pour un garage automobile, comprenant un catalogue de véhicules et de pièces d'occasion ainsi qu'un espace d'administration.",
-    tags: ["FastAPI", "Production", "Next.js"],
+    tags: ["FastAPI", "Production", "Fullstack"],
     href: "/projets/glf-auto",
     image: "/projects/glf-auto/home.png",
   },
@@ -23,7 +23,7 @@ const featured = [
     title: "Brian's Buzzer",
     description:
       "Application de buzzer multijoueur développée pour animer des quiz en temps réel, synchronisée entre plusieurs appareils grâce aux WebSockets.",
-    tags: ["FastAPI", "WebSockets", "Temps réel", "Multi-joueurs"],
+    tags: ["FastAPI", "Temps réel", "Multi-joueurs"],
     href: "/projets/brians-buzzer",
     image: "/projects/buzzer/host.png",
   },
