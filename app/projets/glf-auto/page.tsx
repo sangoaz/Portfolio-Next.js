@@ -2,34 +2,52 @@ import TechBadge from "@/components/TechBadge";
 import ScreenshotGallery from "@/components/ScreenshotGallery";
 
 const stack = [
+  "Python",
   "FastAPI",
   "PostgreSQL (Supabase)",
   "SQLAlchemy / SQLModel",
   "Alembic",
   "JWT",
-  "Next.js 16",
-  "Tailwind CSS 4",
+  "Next.js",
+  "Tailwind CSS",
+  "Render",
+  "Vercel",
+  "Pydantic",
+  "Resend",
 ];
 
-const features = [
-  "Catalogue public de véhicules et pièces d'occasion, avec fiches détaillées",
-  "Formulaires de contact et de demande de reprise de véhicule",
-  "Espace d'administration protégé (JWT) pour gérer le catalogue et les photos",
-  "Gestion des services affichés sur le site",
-  "Tableau de bord synthétique pour le gérant du garage",
-  "Emails transactionnels pour les demandes de contact et de reprise",
+const features = {
+  public: [
+    "Catalogue des véhicules",
+    "Catalogue des pièces",
+    "Demande de contact",
+    "Demande de reprise",
+  ],
+  admin: [
+    "Tableau de bord synthétique",
+    "Gestion complète des véhicules",
+    "Gestion des pièces",
+    "Gestion des services",
+    "Suivi des demandes clients",
+  ],
+};
+
+const challenges = [
+  "Concevoir une API REST pour alimenter le site public et l'administration",
+  "Gérer l'authentification sécurisée des administrateurs",
+  "Permettre l'upload et l'organisation des photos",
+  "Déployer une architecture complète (frontend + backend + base de données)",
 ];
 
 export default function GlfAuto() {
   return (
     <main className="mx-auto max-w-3xl px-6 pb-24 pt-16 sm:pt-24">
-      <p className="text-sm font-medium text-accent">Projet</p>
-      <h1 className="mt-3 text-3xl font-medium sm:text-4xl">GLF Auto</h1>
+      <h1 className="text-3xl font-medium sm:text-4xl">GLF Auto</h1>
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
-        Plateforme web développée pour un garage automobile indépendant,
-        permettant de présenter et vendre des véhicules et pièces
-        d&apos;occasion en ligne. Déployée en production et utilisée par un
-        client réel.
+        GLF Auto est une plateforme web conçue pour un garage automobile indépendant.
+        Elle centralise la gestion du catalogue de véhicules et de pièces d'occasion, 
+        tout en offrant au gérant un espace d'administration complet. 
+        L'application est déployée en production et utilisée quotidiennement par le client.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3">
@@ -39,7 +57,7 @@ export default function GlfAuto() {
           rel="noreferrer"
           className="rounded-full bg-accent px-4 py-2 text-sm font-medium text-[#06120d] transition-opacity hover:opacity-90"
         >
-          Voir le site en ligne →
+          Site en ligne →
         </a>
         <a
           href="https://github.com/sangoaz/GLF-auto-Frontend"
@@ -47,7 +65,7 @@ export default function GlfAuto() {
           rel="noreferrer"
           className="rounded-full border border-border px-4 py-2 text-sm transition-colors hover:border-border-strong"
         >
-          Frontend →
+          Code Frontend →
         </a>
         <a
           href="https://github.com/sangoaz/GLF-auto"
@@ -55,7 +73,7 @@ export default function GlfAuto() {
           rel="noreferrer"
           className="rounded-full border border-border px-4 py-2 text-sm transition-colors hover:border-border-strong"
         >
-          Backend →
+          Code Backend →
         </a>
       </div>
 
@@ -63,7 +81,9 @@ export default function GlfAuto() {
         <ScreenshotGallery
           screenshots={[
             { src: "/projects/glf-auto/home.png", alt: "Page d'accueil de GLF Auto" },
+            { src: "/projects/glf-auto/CatalogueVehicules.png", alt: "Catalogue public de véhicules GLF Auto" },
             { src: "/projects/glf-auto/admin.png", alt: "Tableau de bord d'administration GLF Auto" },
+            { src: "/projects/glf-auto/gestion_vehicule.png", alt: "Gestion de véhicule côté admin GLF Auto" },
           ]}
         />
       </div>
@@ -86,18 +106,52 @@ export default function GlfAuto() {
       </section>
 
       <section className="mt-10">
-        <h2 className="text-lg font-medium">Fonctionnalités</h2>
+        <h2 className="text-lg font-medium">Les principaux défis</h2>
         <ul className="mt-3 flex flex-col gap-2">
-          {features.map((feature) => (
+          {challenges.map((challenge) => (
             <li
-              key={feature}
+              key={challenge}
               className="flex gap-3 text-sm leading-relaxed text-muted"
             >
               <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
-              {feature}
+              {challenge}
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-lg font-medium">Fonctionnalités</h2>
+        <div className="mt-3 grid gap-8 sm:grid-cols-2">
+          <div>
+            <h3 className="text-sm font-medium text-muted">Site public</h3>
+            <ul className="mt-3 flex flex-col gap-2">
+              {features.public.map((feature) => (
+                <li
+                  key={feature}
+                  className="flex gap-3 text-sm leading-relaxed text-muted"
+                >
+                  <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-medium text-muted">Administration</h3>
+            <ul className="mt-3 flex flex-col gap-2">
+              {features.admin.map((feature) => (
+                <li
+                  key={feature}
+                  className="flex gap-3 text-sm leading-relaxed text-muted"
+                >
+                  <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section className="mt-10">
@@ -108,6 +162,17 @@ export default function GlfAuto() {
           ))}
         </div>
       </section>
+
+      <section className="mt-10">
+        <h2 className="text-lg font-medium">Ce que j'ai appris</h2>
+        <p className="mt-3 text-sm leading-relaxed text-muted">
+          Ce projet a été ma première application développée pour un client réel.
+          Il m'a amené à concevoir une architecture complète, gérer un déploiement en production, 
+          mettre en place une authentification sécurisée, intégrer un service de stockage de fichiers
+           et prendre en compte les contraintes d'un utilisateur final.
+        </p>
+      </section>
+
     </main>
   );
 }
