@@ -1,7 +1,7 @@
 import TechBadge from "@/components/TechBadge";
 import ScreenshotGallery from "@/components/ScreenshotGallery";
 
-const stack = ["Python 3.11+", "FastAPI", "SQLModel / SQLAlchemy", "PostgreSQL", "Pydantic", "Pytest"];
+const stack = ["Python", "FastAPI", "SQLModel / SQLAlchemy", "PostgreSQL", "Pydantic", "JWT", "Pytest", "Pytest-cov",];
 
 const features = [
   "CRUD véhicules complet (création, lecture, modification, suppression)",
@@ -13,17 +13,33 @@ const features = [
   "Authentification sécurisée et pagination des historiques",
 ];
 
+const challenges = [
+  "Concevoir une architecture modulaire facilement extensible",
+  "Garantir l'isolation complète des données entre plusieurs entreprises",
+  "Mettre en place un système de rôles et permissions réutilisable",
+  "Développer un moteur d'alertes métier basé sur des règles de maintenance",
+  "Assurer une forte couverture de tests automatisés",
+];
+
+const rules = [
+  "Le kilométrage d'un véhicule est considéré comme une donnée critique et ne peut qu'augmenter.",
+  "Les alertes de maintenance sont calculées automatiquement selon le kilométrage ou les échéances définies.",
+  "Chaque entreprise ne peut accéder qu'à ses propres données, garantissant une isolation complète entre les différents clients.",
+  "Les actions autorisées dépendent du rôle de l'utilisateur et sont vérifiées avant chaque opération sensible.",
+  "Les affectations de véhicules sont historisées afin de conserver une trace des changements dans le temps.",
+];
+
 export default function CarFleet() {
   return (
     <main className="mx-auto max-w-3xl px-6 pb-24 pt-16 sm:pt-24">
-      <p className="text-sm font-medium text-accent">Projet</p>
-      <h1 className="mt-3 text-3xl font-medium sm:text-4xl">
+      <h1 className="text-3xl font-medium sm:text-4xl">
         Car Fleet Management
       </h1>
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
-        API backend pour la gestion d&apos;une flotte automobile : véhicules,
-        entretiens, carburant et alertes, avec une architecture
-        multi-entreprises et un système de rôles.
+        Car Fleet Management est un projet personnel développé pour concevoir une API backend complète
+         autour d'une problématique métier réaliste : la gestion d'une flotte automobile. 
+         L'objectif était de mettre en pratique les bonnes pratiques de conception d'API, d'architecture logicielle,
+          de tests automatisés et de gestion des permissions.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3">
@@ -41,7 +57,7 @@ export default function CarFleet() {
         <ScreenshotGallery
           screenshots={[
             {
-              src: "/projects/car-fleet/swagger.png",
+              src: "/projects/car-fleet/swagger_overview.png",
               alt: "Documentation Swagger de l'API Car Fleet Management",
             },
           ]}
@@ -51,20 +67,47 @@ export default function CarFleet() {
       <section className="mt-12">
         <h2 className="text-lg font-medium">Le projet</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          L&apos;API centralise la gestion des véhicules d&apos;une flotte :
-          création, modification, suppression, consultation, suivi détaillé
-          des entretiens et des pleins de carburant, avec des alertes
-          générées automatiquement pour anticiper les opérations de
-          maintenance.
+          L'application repose sur une architecture modulaire séparant les modèles,
+           les routes, les services, les permissions et la logique métier afin 
+           de faciliter sa maintenance et son évolution.
         </p>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          Le projet gère plusieurs entreprises isolées entre elles
-          (multi-tenant) : chaque entreprise dispose de sa propre flotte, de
-          ses propres utilisateurs et de ses propres données. Un système de
-          rôles (administrateur, gestionnaire...) définit précisément qui
-          peut consulter, créer ou modifier quoi au sein de chaque
-          entreprise.
+          Elle prend en charge plusieurs entreprises indépendantes, 
+          chacune disposant de sa propre flotte, de ses utilisateurs et de ses données.
+          Les accès sont sécurisés par un système de rôles et de permissions, 
+          tandis que les règles métier garantissent la cohérence des informations tout 
+          au long du cycle de vie des véhicules.
         </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-lg font-medium">Les principaux défis</h2>
+        <ul className="mt-3 flex flex-col gap-2">
+          {challenges.map((challenge) => (
+            <li
+              key={challenge}
+              className="flex gap-3 text-sm leading-relaxed text-muted"
+            >
+              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
+              {challenge}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-lg font-medium">Les règles métier</h2>
+        <ul className="mt-3 flex flex-col gap-2">
+          {rules.map((rule) => (
+            <li
+              key={rule}
+              className="flex gap-3 text-sm leading-relaxed text-muted"
+            >
+              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
+              {rule}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mt-10">
@@ -100,6 +143,16 @@ export default function CarFleet() {
           ))}
         </div>
       </section>
+
+      <section className="mt-10">
+        <h2 className="text-lg font-medium">Ce que j'ai appris</h2>
+        <p className="mt-3 text-sm leading-relaxed text-muted">
+          Ce projet m'a permis d'approfondir la conception d'API REST complexes, 
+          la modélisation métier, l'organisation d'une architecture modulaire et 
+          la mise en place d'une stratégie de tests automatisés à forte couverture.
+        </p>
+      </section>
+      
     </main>
   );
 }

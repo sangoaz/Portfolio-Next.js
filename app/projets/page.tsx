@@ -15,7 +15,7 @@ const projects = [
       "API de gestion de flotte automobile multi-entreprises : véhicules, entretiens, carburant, alertes automatiques et rôles utilisateurs. 96% de couverture de tests.",
     tags: ["FastAPI", "API REST", "Multi-tenant", "Architecture modulaire"],
     href: "/projets/car-fleet",
-    image: "/projects/car-fleet/swagger.png",
+    image: "/projects/car-fleet/swagger_overview.png",
   },
   {
     title: "Brian's Buzzer",
