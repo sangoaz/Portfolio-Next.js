@@ -40,10 +40,10 @@ export default function Competences() {
         Ce que je sais faire
       </h1>
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
-        Je me concentre sur le développement backend avec Python et FastAPI,
-        avec assez d&apos;autonomie côté frontend pour construire une
-        application de bout en bout — de la base de données jusqu&apos;à
-        l&apos;interface.
+        Je développe principalement des API backend en Python avec FastAPI. 
+        Mes projets couvrent la conception d'architectures métier, la modélisation 
+        de bases de données, les API REST, les WebSockets, les tests automatisés et 
+        le déploiement en production.
       </p>
 
       <div className="mt-12 flex flex-col gap-10">
