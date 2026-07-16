@@ -5,11 +5,14 @@ export default function Contact() {
     <main className="mx-auto max-w-3xl px-6 pb-24 pt-16 sm:pt-24">
       <p className="text-sm font-medium text-accent">Contact</p>
       <h1 className="mt-3 text-3xl font-medium sm:text-4xl">
-        Discutons de votre projet
+        Échangeons autour de votre projet
       </h1>
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
-        Que ce soit pour une opportunité, une mission freelance ou simplement
-        échanger sur un projet technique, n&apos;hésitez pas à me contacter.
+        Je recherche actuellement une mission freelance ou un poste en CDI en
+        développement backend Python, à distance de préférence. Basé à
+        Valence et ses environs, disponible immédiatement. Je reste aussi
+        toujours partant pour échanger autour d'une idée de projet, d'une
+        architecture API ou d'un défi technique.
       </p>
 
       <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -22,6 +25,11 @@ export default function Contact() {
           href="https://github.com/sangoaz"
           label="github.com/sangoaz"
           icon="github"
+        />
+        <ContactButton
+          href="https://www.malt.fr/profile/kevinfruchon"
+          label="Profil Malt"
+          icon="malt"
         />
       </div>
     </main>

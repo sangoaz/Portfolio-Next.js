@@ -20,6 +20,12 @@ export default function Footer() {
           >
             Email
           </a>
+          <a
+            href="https://www.malt.fr/profile/kevinfruchon"
+            className="transition-colors hover:text-foreground"
+          >
+            Malt
+          </a>
         </div>
       </div>
     </footer>

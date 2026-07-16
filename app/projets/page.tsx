@@ -31,6 +31,7 @@ const projects = [
       "Escape game interactif sous forme de faux chat : le joueur résout des énigmes en envoyant des mots-clés qui débloquent le scénario.",
     tags: ["FastAPI", "Gestion d'état", "Logique métier"],
     href: "/projets/loki-escape",
+    image: "/projects/escape-loki/start-game.png"
   },
 ];
 

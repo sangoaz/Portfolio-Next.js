@@ -1,21 +1,29 @@
+import Image from "next/image";
+
 const timeline = [
   {
-    period: "[Dates à préciser]",
-    title: "[Ton métier précédent]",
+    period: "Septembre 2018 à Janvier 2025",
+    title: "Diététicien",
     description:
-      "[À compléter avec toi : ce que tu faisais, ce que ça t'a appris, pourquoi tu as eu envie de changer de voie.]",
+      "Pendant plusieurs années, j'ai accompagné des patients et travaillé dans le domaine de la nutrition. Cette expérience m'a appris à analyser des besoins, communiquer avec différents interlocuteurs et proposer des solutions adaptées à chaque situation.",
   },
   {
-    period: "[Dates à préciser]",
-    title: "[Formation / reconversion]",
+    period: "2025",
+    title: "Reconversion",
     description:
-      "[À compléter avec toi : école, bootcamp, autodidacte — comment tu as appris FastAPI, Python, Next.js.]",
+      "Animé depuis longtemps par l'informatique, j'ai décidé d'entamer une reconversion complète. Je me suis formé principalement de manière autodidacte grâce aux formations CS50 de Harvard, tout en réalisant de nombreux projets personnels pour mettre immédiatement les notions en pratique.",
+  },
+  {
+    period: "2026",
+    title: "Projets",
+    description:
+      "Afin d'approfondir mes compétences, j'ai conçu plusieurs applications complètes autour de problématiques variées : API REST, temps réel avec WebSockets, architecture multi-tenant, règles métier, tests automatisés et déploiement en production.",
   },
   {
     period: "Aujourd'hui",
-    title: "Développeur backend",
+    title: "Développeur Python / backend",
     description:
-      "Je construis des API et des applications de bout en bout (FastAPI, PostgreSQL, Next.js), avec plusieurs projets déployés en production, dont un pour un client réel.",
+      "Aujourd'hui, je recherche des missions en développement backend Python, avec une préférence pour les API REST et les applications métier. J'apprécie particulièrement concevoir des architectures simples, maintenables et adaptées à des besoins concrets.",
   },
 ];
 
@@ -23,21 +31,27 @@ export default function Parcours() {
   return (
     <main className="mx-auto max-w-3xl px-6 pb-24 pt-16 sm:pt-24">
       <div className="flex items-center gap-5">
-        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-surface text-sm font-medium text-accent">
-          KF
+        <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full bg-surface">
+          <Image
+            src="/projects/profille/photo.jpg"
+            alt="Photo de Kévin Fruchon"
+            fill
+            className="object-cover"
+          />
         </div>
         <div>
           <p className="text-sm font-medium text-accent">Parcours</p>
           <h1 className="text-3xl font-medium sm:text-4xl">
-            De [ancien métier] à développeur
+            Mon parcours vers le développement
           </h1>
         </div>
       </div>
 
       <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted">
-        [À compléter avec toi : deux ou trois phrases sur ta reconversion —
-        ce qui t&apos;a amené au développement, ce que tu recherches
-        aujourd&apos;hui.]
+        Après plusieurs années en tant que diététicien, j'ai choisi de me reconvertir 
+        dans le développement logiciel afin de transformer une passion de longue date en métier. 
+        Depuis, je me forme à temps plein et développe des projets personnels et professionnels 
+        qui m'ont permis d'acquérir une solide expérience en Python, FastAPI et en conception d'API backend.
       </p>
 
       <div className="mt-14 flex flex-col">
@@ -59,6 +73,18 @@ export default function Parcours() {
           </div>
         ))}
       </div>
+
+      <section className="mt-10">
+        <h2 className="text-lg font-medium">Ce qui me motive</h2>
+        <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
+          En tant que diététicien, mon travail consistait à écouter une situation, 
+          comprendre ce qui la rendait complexe, puis construire une réponse adaptée à la personne en face de moi.
+          Je retrouve aujourd'hui cette même démarche dans le développement backend : 
+          partir d'un besoin réel, en identifier les contraintes, puis concevoir une solution fiable et durable.
+          Ce n'est pas un renoncement à ce qui me plaisait auparavant, 
+          mais la continuité d'une même façon de résoudre des problèmes, appliquée à un autre domaine.
+        </p>
+      </section>
     </main>
   );
 }
