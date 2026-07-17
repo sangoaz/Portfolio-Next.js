@@ -40,7 +40,7 @@ export default function Home() {
           Kévin Fruchon
         </h1>
         <p className="max-w-xl text-base leading-relaxed text-muted">
-          Je développe des API et des applications web robustes, du premier commit jusqu'au déploiement en production.
+          Je développe des API et des applications web robustes, du premier commit jusqu&apos;au déploiement en production.
         </p>
         <div className="flex flex-wrap gap-2">
           <TechBadge label="Python"></TechBadge>

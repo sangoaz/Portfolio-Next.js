@@ -37,8 +37,8 @@ export default function CarFleet() {
       </h1>
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
         Car Fleet Management est un projet personnel développé pour concevoir une API backend complète
-         autour d'une problématique métier réaliste : la gestion d'une flotte automobile. 
-         L'objectif était de mettre en pratique les bonnes pratiques de conception d'API, d'architecture logicielle,
+         autour d&apos;une problématique métier réaliste : la gestion d&apos;une flotte automobile.
+         L&apos;objectif était de mettre en pratique les bonnes pratiques de conception d&apos;API, d&apos;architecture logicielle,
           de tests automatisés et de gestion des permissions.
       </p>
 
@@ -67,7 +67,7 @@ export default function CarFleet() {
       <section className="mt-12">
         <h2 className="text-lg font-medium">Le projet</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          L'application repose sur une architecture modulaire séparant les modèles,
+          L&apos;application repose sur une architecture modulaire séparant les modèles,
            les routes, les services, les permissions et la logique métier afin 
            de faciliter sa maintenance et son évolution.
         </p>
@@ -145,11 +145,11 @@ export default function CarFleet() {
       </section>
 
       <section className="mt-10">
-        <h2 className="text-lg font-medium">Ce que j'ai appris</h2>
+        <h2 className="text-lg font-medium">Ce que j&apos;ai appris</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          Ce projet m'a permis d'approfondir la conception d'API REST complexes, 
-          la modélisation métier, l'organisation d'une architecture modulaire et 
-          la mise en place d'une stratégie de tests automatisés à forte couverture.
+          Ce projet m&apos;a permis d&apos;approfondir la conception d&apos;API REST complexes,
+          la modélisation métier, l&apos;organisation d&apos;une architecture modulaire et
+          la mise en place d&apos;une stratégie de tests automatisés à forte couverture.
         </p>
       </section>
       

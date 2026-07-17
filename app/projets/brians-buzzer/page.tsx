@@ -32,14 +32,14 @@ export default function BriansBuzzer() {
   return (
     <main className="mx-auto max-w-3xl px-6 pb-24 pt-16 sm:pt-24">
       <h1 className="text-3xl font-medium sm:text-4xl">
-        Brian's Buzzer
+        Brian&apos;s Buzzer
       </h1>
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
-        Brian's Buzzer est une application de buzzer temps réel permettant 
-        à plusieurs participants de rejoindre une même session et de synchroniser 
-        instantanément leurs actions entre plusieurs appareils. 
-        Ce projet m'a permis d'explorer les communications WebSocket et la gestion 
-        d'événements en temps réel avec FastAPI.
+        Brian&apos;s Buzzer est une application de buzzer temps réel permettant
+        à plusieurs participants de rejoindre une même session et de synchroniser
+        instantanément leurs actions entre plusieurs appareils.
+        Ce projet m&apos;a permis d&apos;explorer les communications WebSocket et la gestion
+        d&apos;événements en temps réel avec FastAPI.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3">
@@ -50,6 +50,14 @@ export default function BriansBuzzer() {
           className="rounded-full border border-border px-4 py-2 text-sm transition-colors hover:border-border-strong"
         >
           Code source →
+        </a>
+        <a
+          href="https://brian-s-buzzer.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-full border border-border px-4 py-2 text-sm transition-colors hover:border-border-strong"
+        >
+          Jeu en ligne →
         </a>
       </div>
 
@@ -65,9 +73,9 @@ export default function BriansBuzzer() {
       <section className="mt-12">
         <h2 className="text-lg font-medium">Le projet</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          L'application repose sur une architecture client-serveur 
-          où chaque salle est gérée indépendamment. Les participants 
-          rejoignent une session grâce à un code unique, puis communiquent avec 
+          L&apos;application repose sur une architecture client-serveur
+          où chaque salle est gérée indépendamment. Les participants
+          rejoignent une session grâce à un code unique, puis communiquent avec
           le serveur via une connexion WebSocket persistante.
         </p>
       </section>
@@ -120,10 +128,10 @@ export default function BriansBuzzer() {
       <section className="mt-10">
         <h2 className="text-lg font-medium">Architecture temps réel</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          La communication repose sur une connexion WebSocket persistante entre chaque client et le serveur, 
-          plutôt que sur du polling HTTP classique : les mises à jour sont poussées instantanément, 
-          sans délai d'attente. Le serveur ne se contente pas de relayer les messages, il fait 
-          autorité sur l'état de chaque salle. C'est lui qui tranche en cas d'événements simultanés, 
+          La communication repose sur une connexion WebSocket persistante entre chaque client et le serveur,
+          plutôt que sur du polling HTTP classique : les mises à jour sont poussées instantanément,
+          sans délai d&apos;attente. Le serveur ne se contente pas de relayer les messages, il fait
+          autorité sur l&apos;état de chaque salle. C&apos;est lui qui tranche en cas d&apos;événements simultanés,
           ce qui évite toute divergence entre les appareils connectés.
         </p>
       </section>
@@ -138,11 +146,11 @@ export default function BriansBuzzer() {
       </section>
 
       <section className="mt-10">
-        <h2 className="text-lg font-medium">Ce que j'ai appris</h2>
+        <h2 className="text-lg font-medium">Ce que j&apos;ai appris</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          Ce projet m'a permis d'approfondir les communications WebSocket, 
-          la gestion d'un état partagé entre plusieurs clients et la conception 
-          d'une application temps réel où la synchronisation et la 
+          Ce projet m&apos;a permis d&apos;approfondir les communications WebSocket,
+          la gestion d&apos;un état partagé entre plusieurs clients et la conception
+          d&apos;une application temps réel où la synchronisation et la
           réactivité sont essentielles.
         </p>
       </section>

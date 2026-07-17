@@ -45,9 +45,9 @@ export default function GlfAuto() {
       <h1 className="text-3xl font-medium sm:text-4xl">GLF Auto</h1>
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
         GLF Auto est une plateforme web conçue pour un garage automobile indépendant.
-        Elle centralise la gestion du catalogue de véhicules et de pièces d'occasion, 
-        tout en offrant au gérant un espace d'administration complet. 
-        L'application est déployée en production et utilisée quotidiennement par le client.
+        Elle centralise la gestion du catalogue de véhicules et de pièces d&apos;occasion,
+        tout en offrant au gérant un espace d&apos;administration complet.
+        L&apos;application est déployée en production et utilisée quotidiennement par le client.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3">
@@ -164,12 +164,12 @@ export default function GlfAuto() {
       </section>
 
       <section className="mt-10">
-        <h2 className="text-lg font-medium">Ce que j'ai appris</h2>
+        <h2 className="text-lg font-medium">Ce que j&apos;ai appris</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted">
           Ce projet a été ma première application développée pour un client réel.
-          Il m'a amené à concevoir une architecture complète, gérer un déploiement en production, 
+          Il m&apos;a amené à concevoir une architecture complète, gérer un déploiement en production,
           mettre en place une authentification sécurisée, intégrer un service de stockage de fichiers
-           et prendre en compte les contraintes d'un utilisateur final.
+           et prendre en compte les contraintes d&apos;un utilisateur final.
         </p>
       </section>
 

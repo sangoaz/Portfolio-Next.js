@@ -11,8 +11,8 @@ export default function Contact() {
         Je recherche actuellement une mission freelance ou un poste en CDI en
         développement backend Python, à distance de préférence. Basé à
         Valence et ses environs, disponible immédiatement. Je reste aussi
-        toujours partant pour échanger autour d'une idée de projet, d'une
-        architecture API ou d'un défi technique.
+        toujours partant pour échanger autour d&apos;une idée de projet, d&apos;une
+        architecture API ou d&apos;un défi technique.
       </p>
 
       <div className="mt-10 grid gap-4 sm:grid-cols-2">

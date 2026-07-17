@@ -32,7 +32,7 @@ export default function LokiEscape() {
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
         Loki Escape est un projet personnel développé pour créer 
         un escape game interactif sous forme de faux chat. Le joueur progresse 
-        dans une histoire en résolvant des énigmes, tandis que l'API gère l'état de la partie, 
+        dans une histoire en résolvant des énigmes, tandis que l&apos;API gère l&apos;état de la partie,
         la validation des réponses et le déroulement du scénario.
       </p>
 
@@ -68,8 +68,8 @@ export default function LokiEscape() {
         <p className="mt-3 text-sm leading-relaxed text-muted">
           La logique du jeu est volontairement découplée du scénario : 
           les messages, les réponses attendues et les transitions sont regroupés 
-          dans un fichier dédié, ce qui permet de modifier ou d'enrichir l'histoire sans 
-          toucher au fonctionnement de l'API.
+          dans un fichier dédié, ce qui permet de modifier ou d&apos;enrichir l&apos;histoire sans
+          toucher au fonctionnement de l&apos;API.
         </p>
       </section>
 
@@ -113,10 +113,10 @@ export default function LokiEscape() {
       </section>
 
       <section className="mt-10">
-        <h2 className="text-lg font-medium">Ce que j'ai appris</h2>
+        <h2 className="text-lg font-medium">Ce que j&apos;ai appris</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          Ce projet m'a permis d'explorer la conception d'une API pilotant un scénario interactif, 
-          la gestion d'un état applicatif côté serveur et l'organisation d'une 
+          Ce projet m&apos;a permis d&apos;explorer la conception d&apos;une API pilotant un scénario interactif,
+          la gestion d&apos;un état applicatif côté serveur et l&apos;organisation d&apos;une
           architecture où la logique métier reste indépendante du contenu du jeu.
         </p>
       </section>

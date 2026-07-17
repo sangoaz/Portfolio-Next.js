@@ -48,10 +48,10 @@ export default function Parcours() {
       </div>
 
       <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted">
-        Après plusieurs années en tant que diététicien, j'ai choisi de me reconvertir 
-        dans le développement logiciel afin de transformer une passion de longue date en métier. 
-        Depuis, je me forme à temps plein et développe des projets personnels et professionnels 
-        qui m'ont permis d'acquérir une solide expérience en Python, FastAPI et en conception d'API backend.
+        Après plusieurs années en tant que diététicien, j&apos;ai choisi de me reconvertir
+        dans le développement logiciel afin de transformer une passion de longue date en métier.
+        Depuis, je me forme à temps plein et développe des projets personnels et professionnels
+        qui m&apos;ont permis d&apos;acquérir une solide expérience en Python, FastAPI et en conception d&apos;API backend.
       </p>
 
       <div className="mt-14 flex flex-col">
@@ -77,12 +77,12 @@ export default function Parcours() {
       <section className="mt-10">
         <h2 className="text-lg font-medium">Ce qui me motive</h2>
         <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
-          En tant que diététicien, mon travail consistait à écouter une situation, 
+          En tant que diététicien, mon travail consistait à écouter une situation,
           comprendre ce qui la rendait complexe, puis construire une réponse adaptée à la personne en face de moi.
-          Je retrouve aujourd'hui cette même démarche dans le développement backend : 
-          partir d'un besoin réel, en identifier les contraintes, puis concevoir une solution fiable et durable.
-          Ce n'est pas un renoncement à ce qui me plaisait auparavant, 
-          mais la continuité d'une même façon de résoudre des problèmes, appliquée à un autre domaine.
+          Je retrouve aujourd&apos;hui cette même démarche dans le développement backend :
+          partir d&apos;un besoin réel, en identifier les contraintes, puis concevoir une solution fiable et durable.
+          Ce n&apos;est pas un renoncement à ce qui me plaisait auparavant,
+          mais la continuité d&apos;une même façon de résoudre des problèmes, appliquée à un autre domaine.
         </p>
       </section>
     </main>
